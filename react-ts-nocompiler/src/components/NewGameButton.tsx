@@ -1,4 +1,4 @@
-export default function NewGameButton({ isGameOver, startNewGame }) {
+export default function NewGameButton({ isGameOver, startNewGame }: { isGameOver: boolean, startNewGame: () => void}) {
     if (!isGameOver) {
         return null
     } else {

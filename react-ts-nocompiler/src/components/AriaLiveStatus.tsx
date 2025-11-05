@@ -3,6 +3,11 @@ export default function AriaLiveStatus({
     lastGuessedLetter,
     guessedLetters,
     numGuessesLeft
+}: {
+    currentWord: string,
+    lastGuessedLetter: string,
+    guessedLetters: string[],
+    numGuessesLeft: number
 }) {
     return (
         <section

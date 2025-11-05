@@ -1,12 +1,20 @@
 import { clsx } from "clsx"
 
+type KeyboardProps = {
+    alphabet: string
+    guessedLetters: string[]
+    currentWord: string
+    isGameOver: boolean
+    addGuessedLetter: (letter: string) => void
+}
+
 export default function Keyboard({
     alphabet,
     guessedLetters,
     currentWord,
     isGameOver,
     addGuessedLetter
-}) {
+}: KeyboardProps) {
     const keyboardElements = alphabet.split("").map(letter => {
         const isGuessed = guessedLetters.includes(letter)
         const isCorrect = isGuessed && currentWord.includes(letter)

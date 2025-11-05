@@ -1,6 +1,7 @@
 import { clsx } from "clsx"
+import type { Language } from "../languages.ts"
 
-export default function LanguageChips({ languages, wrongGuessCount }) {
+export default function LanguageChips({ languages, wrongGuessCount }: { languages: Language[], wrongGuessCount: number }) {
     const languageElements = languages.map((lang, index) => {
         const isLanguageLost = index < wrongGuessCount
         const styles = {

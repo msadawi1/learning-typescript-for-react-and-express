@@ -1,6 +1,6 @@
 import { clsx } from "clsx"
 
-export default function WordLetters({ currentWord, guessedLetters, isGameLost }) {
+export default function WordLetters({ currentWord, guessedLetters, isGameLost }: { currentWord: string, guessedLetters: string[], isGameLost: boolean}) {
     return (
         <section className="word">
             {currentWord.split("").map((letter, index) => {
